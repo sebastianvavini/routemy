@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RouteMy</string>
+    <string name="fill_all_fields">Preencha todos os campos</string>
+    <string name="fill_all_fields_no_zero">Autonomi não pode ser 0</string>
+</resources>

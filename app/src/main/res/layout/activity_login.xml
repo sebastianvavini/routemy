@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:padding="16dp">
+
+
+
+        <EditText
+            android:id="@+id/edit_text_user_id"
+            android:layout_marginTop="80dp"
+
+            android:padding="16dp"
+            android:hint="User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:layout_below="@+id/edit_text_user_id"
+            android:hint="Password"
+            android:id="@+id/edit_senha"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/button_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_senha"
+            android:backgroundTint="@color/black"
+            android:text="Enter" />
+        <TextView
+            android:id="@+id/text_cadastre_se"
+            android:gravity="center"
+            android:layout_marginTop="18dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Não é cadastrado? Cadastre-se"
+            android:layout_below="@+id/button_enter"/>
+        <TextView
+            android:id="@+id/text_esqueceu_senha"
+            android:layout_below="@id/text_cadastre_se"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esqueceu sua senha?"/>
+
+
+</RelativeLayout>

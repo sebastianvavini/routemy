@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <LinearLayout android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_comment_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ouvidoria"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/text_fazer_loging"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fazer Login" android:layout_weight="1"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Seus pontos:"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edityText_Distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Distance"
+            android:padding="12dp"
+            android:inputType="numberDecimal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distancia em KMs"
+                android:padding="2dp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <ImageView
+                android:src="@drawable/ic_route"
+                android:id="@+id/image_DefinirRota"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:text="Definir a Rota"/>
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/editText_Price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:padding="12dp"
+            android:inputType="numberDecimal"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preço por litro"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <ImageView
+                android:id="@+id/image_Comprar"
+                android:src="@drawable/ic_baseline_monetization_on_24"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="Comprar Aqui"
+
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editText_Autonomy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Autonomy diferente de Zero"
+
+            android:inputType="numberDecimal"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KMs por litro"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <ImageView
+                android:id="@+id/image_ConsultarModelo"
+                android:src="@drawable/ic_car"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="Consultar Modelo"
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEU GASTO TOTAL:"
+            android:textSize="18dp"
+            android:padding="18dp"
+            android:gravity="left"/>
+        <TextView
+            android:id="@+id/textView_Total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$:"
+            android:textSize="18dp"
+            android:gravity="center"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            android:backgroundTint="@color/black"
+            android:padding="18dp"/>
+        <Button
+            android:id="@+id/buttonConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Conectar"
+            android:backgroundTint="@color/black"
+            android:padding="18dp"/>
+
+        <TextView
+            android:id="@+id/text_chamadas_agora"
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chamada Agora"
+            android:textSize="25dp"
+            android:gravity="center"/>
+        <TableLayout
+            android:id="@+id/table_chamadas"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+
+            <TableRow android:padding="8dp" android:id="@+id/table_row_1">
+
+
+                <TextView
+                    android:id="@+id/text_kms_corrida_1"
+                    android:text="20KMs"
+                    android:textSize="18dp"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:id="@+id/text_cost_corrida_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="55.00"
+                    android:textSize="18dp"/>
+                <TextView
+                    android:id="@+id/text_preco_corrida_1"
+                    android:text="P:R$15,78"
+                    android:padding="8dp"
+                    android:textSize="18dp"
+
+                   />
+                <TextView
+                    android:id="@+id/text_lucro_corrida_1"
+
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:padding="8dp"
+                    android:textSize="18dp"
+                   />
+
+                <TextView
+                    android:id="@+id/text_solicitante_corrida_1"
+                    android:text="Rita"
+                    android:padding="8dp"
+                    />
+
+
+
+            </TableRow>
+
+
+        </TableLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>
